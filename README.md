@@ -9,3 +9,6 @@ SSG : Static Site Generation => runs only at build time
 ISG : Incremental Static Generation => build and runtime
 
 SSR : Server Side Rendering => dynamic rendering at each request
+
+--AUTH
+middleware.ts => Configure protected and public routes
