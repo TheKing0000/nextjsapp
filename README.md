@@ -12,3 +12,10 @@ SSR : Server Side Rendering => dynamic rendering at each request
 
 --AUTH
 middleware.ts => Configure protected and public routes
+
+--CSS
+---ACTIVE CLASS BASED ON URL + ROUTE VARIABLE
+const isActive =
+(pathName.includes(currentLink.route) &&
+currentLink.route.length > 1) ||
+pathName === currentLink.route;
