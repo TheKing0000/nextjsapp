@@ -2,7 +2,7 @@ export default function AskQuestion() {
   return (
     <main>
       <div>
-        <h1 className="h1-bold">Ask</h1>
+        <h1 className="h1-bold">Ask A Question</h1>
       </div>
     </main>
   );
