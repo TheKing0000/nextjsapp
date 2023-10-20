@@ -19,3 +19,29 @@ const isActive =
 (pathName.includes(currentLink.route) &&
 currentLink.route.length > 1) ||
 pathName === currentLink.route;
+
+\_\_MongoDb
+Schema => Modell => Document
+use create and save methods because they use validation (for example findBy..andUpdate doesnt use validation !)
+
+virtuals =>key value pár létrehozása anélkül , hogy elmenntené a db-ben pl firstName + lastName = fullName
+
+methods=> do something...
+
+MIDDLEWARE do something before / after => save remove...
+
+userSchema.pre('save', function(next){
+this.updatedAt = Date.now()
+next()
+})
+
+subdocuments are not saved individually, they are saved whenever their top-level parent document is saved
+
+timesamp => Mongoose schemas support a timestamps option. If you set timestamps: true, Mongoose will add two properties of type Date to your schema:
+
+1., createdAt: a date representing when this document was created
+2., updatedAt: a date representing when this document was last updated
+
+const userSchema = new Schema({ name: String }, { timestamps: true });
+
+--Transactions in Mongoose
